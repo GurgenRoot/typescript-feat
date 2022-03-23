@@ -6,6 +6,7 @@ import axios from "axios";
 import {ITodo, IUser} from "./types/types";
 import List from "./components/List";
 import TodoItem from "./components/TodoItem";
+import EventItem from "./components/EventItem";
 
 const App = () => {
 
@@ -48,6 +49,7 @@ const App = () => {
             items={todos}
             renderItem={(todo: ITodo) => <TodoItem key={todo.id} todo={todo}/>}
         />
+        <EventItem/>
     </div>
   );
 }
