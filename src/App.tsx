@@ -1,9 +1,10 @@
 import {useEffect, useState} from "react";
 import Card from "./components/Card";
 import {CardVariant} from "./components/Card";
-import Userlists from "./components/Userlists";
+import Userlist from "./components/UserList";
 import axios from "axios";
 import {IUser} from "./types/types";
+import List from "./components/List";
 
 const App = () => {
 
@@ -27,7 +28,10 @@ const App = () => {
             text
         </Card>
 
-        <Userlists users={users}/>
+        <List
+            items={users}
+            renderItem={(user: IUser) => <Userlist key={user.id} user={user}/>}
+        />
     </div>
   );
 }
