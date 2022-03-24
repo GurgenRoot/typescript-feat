@@ -12,7 +12,7 @@ const UsersItemPage: FC = () => {
 
     // @ts-ignore
     const params = useParams<IuserItemPage>();
-    const navigate = useNavigate ()
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchUser()
